@@ -81,8 +81,7 @@ def integrationTestJob(propFileName, appURL) {
                               credentialsId: 'SAUCELABS_CREDENTIALS',
                               usernameVariable: 'SAUCELABS_USERNAME',
                               passwordVariable: 'SAUCELABS_API_KEY']]) {
-                withEnv(["BASE_URL=${appURL}",
-                         "SELENIUM_VERSION=2.52.0"]) {
+                withEnv(["BASE_URL=${appURL}"]) {
                     try {
                         sh testScript
                     }
